@@ -1,3 +1,4 @@
+import React from 'react';
 import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
@@ -17,36 +18,31 @@ export default {
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary = {
-  args: {
-    primary: true,
-    label: 'Button',
-  },
+export const Primary = (args) => <Button {...args} />;
+Primary.args = {
+  primary: true,
+  label: 'Button',
 };
 
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
+export const Secondary = (args) => <Button {...args} />;
+Secondary.args = {
+  label: 'Button',
 };
 
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
+export const Large = (args) => <Button {...args} />;
+Large.args = {
+  size: 'large',
+  label: 'Button',
 };
 
-export const Small = {
-  args: {
-    size: 'small',
-    label: 'Button',
-  },
+export const Small = (args) => <Button {...args} />;
+Small.args = {
+  size: 'small',
+  label: 'Button',
 };
 
-export const icon = {
-  args:{
-    text:false,
-    icon:true,
-  }
-}
+export const Icon = (args) => <Button {...args} />;
+Icon.args = {
+  text: false,
+  icon: true,
+};
